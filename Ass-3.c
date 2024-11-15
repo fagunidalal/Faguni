@@ -50,6 +50,9 @@ int main() {
     l=sqrt(k);
     printf("\nsquare root=%.4f",l);
     break;}
+    default;
+    printf("invalid");
+    break;
 }
     
     return 0;
