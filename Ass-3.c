@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main() {
-    int a,b,c,d,e,f,i,k,m,n,o,p;
+    int a,b,c,d,e,f,i,k;
     float j,l,g,h;
     int option;
     printf("THE FUNCTIONALITIES ARE MENTIONED BELOW:\n1.ADDITION\n2.SUBTRACTION\n3.MULTIPLICATION\n4.DIVISION\n5.LOGARITHMIC VALUES\n6.SQUARE ROOTS\nPICK AN OPERATION TO PERFORM:");
