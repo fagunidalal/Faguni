@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+
+int arm(int a);
+int main()
+{
+    int n;
+    printf("input = ");
+    scanf("%d",&n);
+    if (arm(n)==n)
+    {
+        printf("yes it is an armstrong number\n");
+    }
+    else
+    {
+        printf("no it is not an armstrong number\n");
+    }
+    return 0;
+}
+
+int arm(int a)
+{
+    int e,f=0,g=0;
+    while (a>0)
+    {
+        e=a%10;
+        f=(f*10)+e;
+        a=a/10;
+        g += pow(e,3);
+    }
+    return g;
+}
