@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+    int c,d;
+    printf("Enter num 1 = ");
+    scanf("%d",&c);
+    printf("Enter num 2 = ");
+    scanf("%d",&d);
+    printf("%d - %d = %d\n",c,d,sub(c,d));
+    return 0;
+}
+
+int sub(int a, int b)
+{
+    while (b != 0)
+    {
+        int w = (~a) & b;
+        a = a ^ b;
+        b = w << 1;
+    }
+    return a;
+}
