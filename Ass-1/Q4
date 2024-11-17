@@ -1,0 +1,74 @@
+#include <stdio.h>
+
+void swapWithTemp(int *a, int *b);
+void swapWithoutTemp(int *a, int *b);
+void swapUsingArithmetic(int *a, int *b);
+void swapUsingXOR(int *a, int *b);
+
+int main() {
+    int num1, num2, choice;
+
+    printf("Enter two integers= ");
+    scanf("%d %d", &num1, &num2);
+
+    printf("\nOriginal numbers: num1 = %d, num2 = %d\n", num1, num2);
+
+    printf("Choose swapping method:\n");
+    printf("1.Using temporary variable\n");
+    printf("2.Without using temporary variable\n");
+    printf("3.Using arithmetic operators\n");
+    printf("4.Using XOR operator\n");
+    printf("Enter your choice (1-4): ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            swap1(&num1, &num2);
+            break;
+        case 2:
+            swap2(&num1, &num2);
+            break;
+        case 3:
+            swap3(&num1, &num2);
+            break;
+        case 4:
+            swap4(&num1, &num2);
+            break;
+        default:
+            printf("Invalid choice!");
+            return 1;
+    }
+
+    printf("\nSwapped numbers: num1 = %d, num2 = %d", num1, num2);
+
+    return 0;
+}
+
+void swap1(int *a, int *b) {
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    printf("Swapped using temporary variable\n");
+}
+
+void swap2(int *a, int *b) {
+    *a = *a + *b;
+    *b = *a - *b;
+    *a = *a - *b;
+    printf("Swapped without temporary variable\n");
+}
+
+void swap3(int *a, int *b) {
+    *a = *a * *b;
+    *b = *a / *b;
+    *a = *a / *b;
+    printf("Swapped using arithmetic operators\n");
+}
+
+void swap4(int *a, int *b) {
+    *a = *a ^ *b;
+    *b = *a ^ *b;
+    *a = *a ^ *b;
+    printf("Swapped using XOR operator\n");
+}
