@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main()
+{
+    int n,min,max;
+    do
+    {
+        printf("Number of Students = ");
+        scanf("%d",&n);
+    }
+    while(n<0);
+    int m[n];
+    printf("Range of Marks (0 - 100)\n");
+    for(int i=0; i<n; i++)
+    {
+        printf("marks of Student [%d] = ",i+1);
+        scanf("%d",&m[i]);
+    }
+    min = max = m[0];
+    printf("\n");
+    for(int i=0; i<n; i++)
+    {
+        if(m[i]>=0 && m[i]<=100)
+        {
+            if (m[i] < min)
+            {
+                min = m[i];
+            }
+            if (m[i] > max)
+            {
+                max = m[i];
+            }
+        }
+    }
+    printf("Minimum Marks = %d\n",min);
+    printf("Maximum Marks = %d\n",max);
+    return 0;
+}
