@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void cord(int a, int b);
+int main()
+{
+    int x,y;
+    printf("x : ");
+    scanf("%d",&x);
+    printf("y : ");
+    scanf("%d",&y);
+    cord(x,y);
+    return 0;
+}
+
+void cord(int a, int b)
+{
+    if(a>0)
+    {
+        if(b>0)
+        {
+            printf("the I quadrant\n");
+        }
+        if(b<0)
+        {
+            printf("the IV quadrant\n");
+        }
+    }
+    else if(a<0)
+    {
+        if(b>0)
+        {
+            printf("the II quadrant\n");
+        }
+        if(b<0)
+        {
+            printf("the III quadrant\n");
+        }
+    }
+    else
+    {
+        printf("point lies on axis\n");
+    }
+}
