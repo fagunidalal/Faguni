@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int n;
+    do
+    {
+        printf("Number of Students = ");
+        scanf("%d",&n);
+    }
+    while(n<0);
+    int marks[n];
+    for(int i=0; i<n; i++)
+    {
+        printf("marks of student %d  = ",i+1);
+        scanf("%d",&marks[i]);
+        marks[i] += 5;
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        printf("\n updated marks of student %d  = %d\n",i+1,marks[i]);
+    }
+    return 0;
+}
