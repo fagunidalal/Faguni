@@ -1,0 +1,77 @@
+#include <stdio.h>
+int main()
+{
+int n,i,choice,pos,newsize;
+printf("what size of array do you want?\n=");
+scanf("%d", &n);
+
+int arr[n];
+
+for(i=0;i<n;i++)
+{   
+    printf("enter the element %d for the array = ", i+1);
+    scanf("%d", &arr[i]);
+}
+for(i=0;i<n;i++)
+{
+    printf("\nthe created array :");
+    printf("%d", arr[i]);
+}
+printf("\nwhere do you want to delete the array :\n1 front\n2 in between\n3 end\n=");
+scanf("%d", &choice);
+
+switch(choice)
+{
+    case 1 :
+    {
+        printf("the new array after front deletion:");
+        for(i=0;i<n;i++)
+        {
+            arr[i-1]=arr[i];
+        }
+        n--;
+        for(i=0;i<n;i++)
+        {
+           printf("\n%d", arr[i]);
+        }
+        break;
+    }
+    case 2 :
+    {
+    printf("which position do you want to delete:");
+    scanf("%d", &pos);
+    if(pos<1 || pos>n)
+    printf("invalid position");
+    else
+    {for(i=pos;i<n;i++)
+    {
+        arr[i-1]=arr[i];
+    }
+    n--;
+    printf("the new array after deletion at %d :", pos);
+    for(i=0;i<n;i++)
+    printf("\n%d",arr[i]);
+    break;
+    }
+    }
+    case 3 :
+    {
+        for(i=0;i<n;i++)
+        {
+            n = n-1;
+        }
+    printf("the new array after end deletion:");
+    for(i=0;i<=n;i++)
+    {
+        printf("\n%d", arr[i]);
+    }
+    break;
+    }
+    default :
+    printf("invalid choice");
+    break;
+
+}    
+    
+    return 0;
+}
