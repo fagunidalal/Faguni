@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int i, j, total;
+    printf("enter size of array = ");
+    scanf("%d", &total);
+    int arr[total];
+    for(i=0 ; i<total ; i++)
+    {
+        printf("value no %d = ", i+1);
+        scanf("%d", &arr[i]);
+    }
+    printf("input: {");
+    for(i=0 ; i<total ; i++)
+    {
+        printf(" %d ", arr[i]);
+    }
+    printf("}");
+    printf("\noutput: {");
+    for(i=0 ; i<total ; i++)
+    {
+        for(j=i+1 ; j<total ; j++)
+        {
+            if(arr[i]==arr[j])
+            printf(" %d ", arr[i]);
+            else("printf-1");
+        }
+    }
+    printf("}");
+    
+return 0;
+}
